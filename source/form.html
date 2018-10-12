@@ -39,8 +39,94 @@
           <h1 class="primary-title">Подбор программы</h1>
           <h4 class="form-page__subtitle">Заполните анкету и мы подберем программу питания для вашего кота</h4>
 
-          <div class="pick-program-form">
+          <div class="pick-form">
+            <form action="POST">
 
+              <div class="info-fieldset">
+                <div class="pick-form__field form-field">
+                  <label class="form-field__label" for="catname">Имя:*</label>
+                  <input class="form-field__input" type="text" name="catname" id="catname" value="Барсик">
+                </div>
+
+                <div class="pick-form__field form-field">
+                  <label class="form-field__label" for="weight">Вес (кг):*</label>
+                  <input class="form-field__input" type="text" name="weight" id="weight" value="7">
+                </div>
+
+                <div class="pick-form__field form-field">
+                  <label class="form-field__label" for="age">Возраст (лет):*</label>
+                  <input class="form-field__input" type="text" name="age" id="age" value="5">
+                </div>
+
+                <div class="pick-form__field form-field form-field--radio">
+                  <div class="form-field__wrap">
+                    <input class="form-field__input" type="radio" name="program" id="weightloss">
+                    <label class="form-field__label" for="weightloss">Похудение</label>
+                  </div>
+                  <div class="form-field__wrap">
+                    <input class="form-field__input" type="radio" name="program" id="weightgain">
+                    <label class="form-field__label" for="weightgain">Набор массы</label>
+                  </div>
+                  <div class="form-field__wrap">
+                    <input class="form-field__input" type="radio" name="program" id="dontknow">
+                    <label class="form-field__label" for="dontknow">Не знаю (нужен ваш совет)</label>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="contacts-fieldset">
+                <h2 class="subtitle-wline">Контактные данные (владельца кота)</h2>
+
+                <div class="pick-form__field form-field">
+                  <label class="form-field__label" for="email">E-mail:*</label>
+                  <input class="form-field__input" type="text" name="email" id="email" value="kuklachev@gmail.com">
+                </div>
+
+                <div class="pick-form__field form-field">
+                  <label class="form-field__label" for="phone">Телефон:*</label>
+                  <input class="form-field__input" type="text" name="phone" id="phone" value="8 (960) 900-60-90">
+                </div>
+              </div>
+
+              <div class="comments-fieldset">
+                <h2 class="subtitle-wline">Комментарий</h2>
+
+                <div class="pick-form__field form-field form-field--textarea">
+                  <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+                </div>
+              </div>
+
+              <div class="contacts-fieldset">
+                <h2 class="subtitle-wline">Дополнительно</h2>
+
+                <div class="pick-form__field form-field">
+                  <div class="form-field__wrap">
+                    <input type="checkbox" name="more" id="sugar">
+                    <label class="form-field__label" for="sugar">Сахарозаменитель</label>
+                  </div>
+                  <div class="form-field__wrap">
+                    <input type="checkbox" name="more" id="water">
+                    <label class="form-field__label" for="water">Питьевая вода</label>
+                  </div>
+                  <div class="form-field__wrap">
+                    <input type="checkbox" name="more" id="milk">
+                    <label class="form-field__label" for="milk">Молоко</label>
+                  </div>
+                  <div class="form-field__wrap">
+                    <input type="checkbox" name="more" id="vitamins">
+                    <label class="form-field__label" for="vitamins">Витамины</label>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="form-field__wrap">
+                <button type="submit">Отправить заявку</button>
+              </div>
+
+              <span class="pick-form__instruction">* - Обязательные поля</span>
+            </form>
           </div>
 
         </section>
