@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cat Energy - Функциональное питание для котов</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500&amp;subset=cyrillic" rel="stylesheet">
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <!--Header start-->
+      <header class="page-header">
+
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logo-image" src="images/logo.png" alt="Cat Energy Logo">
+        </a>
+
+        <h1 class="page-header__shop-title shop-title"><strong>Cat</strong> Energy</h1>
+
+        <button class="main-nav__toggle">Меню</button>
+
+        <nav class="main-nav">
+          <ul class="main-nav__list menu-list">
+            <li class="menu-list__item">
+              <a class="menu-list__link" href="index.html">Главная</a>
+            </li>
+            <li class="menu-list__item">
+              <a class="menu-list__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="menu-list__item">
+              <a class="menu-list__link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+
+      </header>
+      <!--Header end-->
+
+      <!--Main start-->
+      <main class="page-main">
+
+        <section class="form-page">
+          <h1 class="primary-title">Подбор программы</h1>
+          <strong class="form-page__subtitle">Заполните анкету и мы подберем программу питания для вашего кота</strong>
+
+          <form action="POST">
+
+            <fieldset class="info-fieldset">
+              <legend class="visually-hidden">Общая информация о коте</legend>
+              <p class="pick-form__field form-field">
+                <label class="form-field__label" for="catname">Имя:*</label>
+                <input class="form-field__input" type="text" name="catname" id="catname" value="Барсик">
+              </p>
+
+              <p class="pick-form__field form-field">
+                <label class="form-field__label" for="weight">Вес (кг):*</label>
+                <input class="form-field__input" type="number" name="weight" id="weight" value="7">
+              </p>
+
+              <p class="pick-form__field form-field">
+                <label class="form-field__label" for="age">Возраст (лет):*</label>
+                <input class="form-field__input" type="number" name="age" id="age" value="5">
+              </p>
+
+              <ul class="pick-form__field form-field form-field--radio">
+                <li class="form-field__wrap">
+                  <input class="form-field__input" type="radio" name="program" id="weightloss">
+                  <label class="form-field__label" for="weightloss">Похудение</label>
+                </li>
+                <li class="form-field__wrap">
+                  <input class="form-field__input" type="radio" name="program" id="weightgain">
+                  <label class="form-field__label" for="weightgain">Набор массы</label>
+                </li>
+                <li class="form-field__wrap">
+                  <input class="form-field__input" type="radio" name="program" id="dontknow">
+                  <label class="form-field__label" for="dontknow">Не знаю (нужен ваш совет)</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="contacts-fieldset">
+              <legend class="subtitle-wline">Контактные данные (владельца кота)</legend>
+
+              <p class="pick-form__field form-field">
+                <label class="form-field__label" for="email">E-mail:*</label>
+                <input class="form-field__input" type="email" name="email" id="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" value="kuklachev@gmail.com">
+              </p>
+
+              <p class="pick-form__field form-field">
+                <label class="form-field__label" for="phone">Телефон:*</label>
+                <input class="form-field__input" type="tel" name="phone" id="phone" pattern="(\+?\d[- .]*){7,13}" value="8 (960) 900-60-90">
+              </p>
+            </fieldset>
+
+            <fieldset class="comments-fieldset">
+              <legend class="subtitle-wline">Комментарий</legend>
+
+              <p class="pick-form__field form-field form-field--textarea">
+                <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+              </p>
+            </fieldset>
+
+            <fieldset class="contacts-fieldset">
+              <legend class="subtitle-wline">Дополнительно</legend>
+
+              <ul class="pick-form__field form-field">
+                <li class="form-field__wrap">
+                  <input type="checkbox" name="more" id="sugar">
+                  <label class="form-field__label" for="sugar">Сахарозаменитель</label>
+                </li>
+                <li class="form-field__wrap">
+                  <input type="checkbox" name="more" id="water">
+                  <label class="form-field__label" for="water">Питьевая вода</label>
+                </li>
+                <li class="form-field__wrap">
+                  <input type="checkbox" name="more" id="milk">
+                  <label class="form-field__label" for="milk">Молоко</label>
+                </li>
+                <li class="form-field__wrap">
+                  <input type="checkbox" name="more" id="vitamins">
+                  <label class="form-field__label" for="vitamins">Витамины</label>
+                </li>
+              </ul>
+            </fieldset>
+
+
+            <p class="form-field__wrap">
+              <button type="submit">Отправить заявку</button>
+            </p>
+
+            <span class="pick-form__instruction">* - Обязательные поля</span>
+          </form>
+
+        </section>
+
+      </main>
+      <!--Main end-->
+
+      <!--Footer start-->
+      <footer class="page-footer">
+
+        <section class="page-footer__location location">
+          <div class="location__header">
+            <h2 class="location__invite">Приглашаем к сотрудничеству дилеров!</h2>
+            <span class="location__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</span>
+          </div>
+          <div class="location__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.3067759240294!2d30.382398289629222!3d59.972853146508754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696378cc74a65ed%3A0x6dc7673fab848eff!2z0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsINCg0L7RgdGB0LjRjw!5e0!3m2!1sru!2suk!4v1539289005079" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+        </section>
+
+        <section class="page-footer__shop-info shop-info">
+          <h1 class="shop-info__shop-title shop-title"><strong>Cat</strong> Energy</h1>
+
+          <nav class="shop-info__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <img class="social__image" src="images/vk.png" alt="VK">
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <img class="social__image" src="images/instagram.png" alt="Instagram">
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <img class="social__image" src="images/facebook.png" alt="Facebook">
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="shop-info__copyright copyright">
+            <a class="copyright__link" href="">
+              <span class="copyright__text">HTML Academy</span>
+              <img class="copyright__logo" src="images/HTMLAcademy_logo.png" alt="Logo">
+            </a>
+          </div>
+        </section>
+
+      </footer>
+      <!--Footer end-->
+
+    </div>
+  </body>
+</html>
