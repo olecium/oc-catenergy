@@ -398,6 +398,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
+  text-transform: uppercase;
   width: 125px;
 }
 .location__address {
@@ -714,7 +715,7 @@ body {
     text-align: right;
   }
 }
-@media (min-width: 1300px) {
+@media (min-width: 1440px) {
   .container {
     width: 1300px;
     margin: 0 auto;
@@ -732,7 +733,7 @@ body {
   }
   .wrapper {
     background: transparent url("../img/green-cat.png") no-repeat 100% 0;
-    /*width: 1440px;*/
+    width: 1440px;
     margin: 0 auto;
   }
   .page-header {
@@ -890,6 +891,7 @@ body {
     position: absolute;
     top: 105px;
     z-index: 1000;
+    width: 100%;
   }
   .location__wrapper {
     background-color: #ffffff;
@@ -900,9 +902,6 @@ body {
   }
   .location__map {
     height: 400px;
-  }
-  .location__invite {
-    text-transform: uppercase;
   }
   .location__address {
     text-align: left;
