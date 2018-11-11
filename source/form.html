@@ -49,49 +49,51 @@
           </div>
           <form action="POST">
 
-            <div class="general-info__wrapper">
-              <fieldset class="form-fieldset info-fieldset">
-                <div class="container">
-                  <div class="fieldset__wrapper">
-                    <legend class="visually-hidden">Общая информация о коте</legend>
-                    <p class="form-field">
-                      <label class="form-field__label" for="catname">Имя:*</label>
-                      <input class="form-field__input" type="text" name="catname" id="catname" value="" placeholder="Барсик">
-                    </p>
+            <div class="container">
+              <div class="general-info__wrapper">
+                <fieldset class="form-fieldset info-fieldset">
+                  <!--<div class="container">-->
+                    <div class="fieldset__wrapper">
+                      <legend class="visually-hidden">Общая информация о коте</legend>
+                      <p class="form-field">
+                        <label class="form-field__label" for="catname">Имя:*</label>
+                        <input class="form-field__input" type="text" name="catname" id="catname" value="" placeholder="Барсик">
+                      </p>
 
-                    <p class="form-field">
-                      <label class="form-field__label" for="weight">Вес (кг):*</label>
-                      <input class="form-field__input" type="text" name="weight" id="weight" value="" placeholder="7">
-                    </p>
+                      <p class="form-field">
+                        <label class="form-field__label" for="weight">Вес (кг):*</label>
+                        <input class="form-field__input" type="text" name="weight" id="weight" value="" placeholder="7">
+                      </p>
 
-                    <p class="form-field">
-                      <label class="form-field__label" for="age">Возраст (лет):*</label>
-                      <input class="form-field__input" type="text" name="age" id="age" value="" placeholder="5">
-                    </p>
+                      <p class="form-field">
+                        <label class="form-field__label" for="age">Возраст (лет):*</label>
+                        <input class="form-field__input" type="text" name="age" id="age" value="" placeholder="5">
+                      </p>
+                    </div>
+                  <!--</div>-->
+                </fieldset>
+
+                <fieldset class="form-fieldset program-fieldset">
+                  <div class="form-radio__wrapper">
+                    <!--<div class="container">-->
+                      <ul class="pick-form__field form-radio">
+                        <li class="form-radio__wrap">
+                          <input class="form-radio__input" type="radio" name="program" id="weightloss">
+                          <label class="form-field__label form-radio__label" for="weightloss">Похудение</label>
+                        </li>
+                        <li class="form-radio__wrap">
+                          <input class="form-radio__input" type="radio" name="program" id="weightgain">
+                          <label class="form-field__label form-radio__label" for="weightgain">Набор массы</label>
+                        </li>
+                        <li class="form-radio__wrap">
+                          <input class="form-radio__input" type="radio" name="program" id="dontknow">
+                          <label class="form-field__label form-radio__label" for="dontknow">Не знаю (нужен ваш совет)</label>
+                        </li>
+                      </ul>
+                    <!--</div>-->
                   </div>
-                </div>
-              </fieldset>
-
-              <fieldset class="form-fieldset program-fieldset">
-                <div class="form-radio__wrapper">
-                  <div class="container">
-                    <ul class="pick-form__field form-radio">
-                      <li class="form-radio__wrap">
-                        <input class="form-radio__input" type="radio" name="program" id="weightloss">
-                        <label class="form-field__label form-radio__label" for="weightloss">Похудение</label>
-                      </li>
-                      <li class="form-radio__wrap">
-                        <input class="form-radio__input" type="radio" name="program" id="weightgain">
-                        <label class="form-field__label form-radio__label" for="weightgain">Набор массы</label>
-                      </li>
-                      <li class="form-radio__wrap">
-                        <input class="form-radio__input" type="radio" name="program" id="dontknow">
-                        <label class="form-field__label form-radio__label" for="dontknow">Не знаю (нужен ваш совет)</label>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </fieldset>
+                </fieldset>
+              </div>
             </div>
 
             <fieldset class="form-fieldset contacts-fieldset">
