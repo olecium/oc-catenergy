@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
   </head>
   <body>
-    <div class="wrapper">
+    <div class="page-form wrapper">
 
       <!--Header start-->
       <header class="page-header">
@@ -43,95 +43,123 @@
       <main class="page-main">
 
         <section class="form-page">
-          <h1 class="primary-title">Подбор программы</h1>
-          <strong class="form-page__subtitle">Заполните анкету и мы подберем программу питания для вашего кота</strong>
-
+          <div class="container">
+            <h1 class="primary-title">Подбор программы</h1>
+            <strong class="form-page__subtitle">Заполните анкету и мы подберем<br> программу питания для вашего кота</strong>
+          </div>
           <form action="POST">
 
-            <fieldset class="info-fieldset">
-              <legend class="visually-hidden">Общая информация о коте</legend>
-              <p class="pick-form__field form-field">
-                <label class="form-field__label" for="catname">Имя:*</label>
-                <input class="form-field__input" type="text" name="catname" id="catname" value="Барсик">
-              </p>
+            <div class="general-info__wrapper">
+              <fieldset class="form-fieldset info-fieldset">
+                <div class="container">
+                  <div class="fieldset__wrapper">
+                    <legend class="visually-hidden">Общая информация о коте</legend>
+                    <p class="form-field">
+                      <label class="form-field__label" for="catname">Имя:*</label>
+                      <input class="form-field__input" type="text" name="catname" id="catname" value="" placeholder="Барсик">
+                    </p>
 
-              <p class="pick-form__field form-field">
-                <label class="form-field__label" for="weight">Вес (кг):*</label>
-                <input class="form-field__input" type="number" name="weight" id="weight" value="7">
-              </p>
+                    <p class="form-field">
+                      <label class="form-field__label" for="weight">Вес (кг):*</label>
+                      <input class="form-field__input" type="text" name="weight" id="weight" value="" placeholder="7">
+                    </p>
 
-              <p class="pick-form__field form-field">
-                <label class="form-field__label" for="age">Возраст (лет):*</label>
-                <input class="form-field__input" type="number" name="age" id="age" value="5">
-              </p>
+                    <p class="form-field">
+                      <label class="form-field__label" for="age">Возраст (лет):*</label>
+                      <input class="form-field__input" type="text" name="age" id="age" value="" placeholder="5">
+                    </p>
+                  </div>
+                </div>
+              </fieldset>
 
-              <ul class="pick-form__field form-field form-field--radio">
-                <li class="form-field__wrap">
-                  <input class="form-field__input" type="radio" name="program" id="weightloss">
-                  <label class="form-field__label" for="weightloss">Похудение</label>
-                </li>
-                <li class="form-field__wrap">
-                  <input class="form-field__input" type="radio" name="program" id="weightgain">
-                  <label class="form-field__label" for="weightgain">Набор массы</label>
-                </li>
-                <li class="form-field__wrap">
-                  <input class="form-field__input" type="radio" name="program" id="dontknow">
-                  <label class="form-field__label" for="dontknow">Не знаю (нужен ваш совет)</label>
-                </li>
-              </ul>
+              <fieldset class="form-fieldset program-fieldset">
+                <div class="form-radio__wrapper">
+                  <div class="container">
+                    <ul class="pick-form__field form-radio">
+                      <li class="form-radio__wrap">
+                        <input class="form-radio__input" type="radio" name="program" id="weightloss">
+                        <label class="form-field__label form-radio__label" for="weightloss">Похудение</label>
+                      </li>
+                      <li class="form-radio__wrap">
+                        <input class="form-radio__input" type="radio" name="program" id="weightgain">
+                        <label class="form-field__label form-radio__label" for="weightgain">Набор массы</label>
+                      </li>
+                      <li class="form-radio__wrap">
+                        <input class="form-radio__input" type="radio" name="program" id="dontknow">
+                        <label class="form-field__label form-radio__label" for="dontknow">Не знаю (нужен ваш совет)</label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <fieldset class="form-fieldset contacts-fieldset">
+              <div class="container">
+                <div class="fieldset__wrapper">
+                  <legend class="fieldset-legend">Контактные данные<br> (владельца кота)</legend>
+
+                  <p class="form-field">
+                    <label class="form-field__label" for="email">E-mail:*</label>
+                    <input class="form-field__input" type="email" name="email" id="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" value="" placeholder="kuklachev@gmail.com">
+                  </p>
+
+                  <p class="form-field">
+                    <label class="form-field__label" for="phone">Телефон:*</label>
+                    <input class="form-field__input" type="tel" name="phone" id="phone" pattern="(\+?\d[- .]*){7,13}" value="" placeholder="8 (960) 900-60-90">
+                  </p>
+                </div>
+              </div>
             </fieldset>
 
-            <fieldset class="contacts-fieldset">
-              <legend class="subtitle-wline">Контактные данные (владельца кота)</legend>
+            <fieldset class="form-fieldset comments-fieldset">
+              <div class="container">
+                <div class="fieldset__wrapper">
+                  <legend class="fieldset-legend">Комментарий</legend>
 
-              <p class="pick-form__field form-field">
-                <label class="form-field__label" for="email">E-mail:*</label>
-                <input class="form-field__input" type="email" name="email" id="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" value="kuklachev@gmail.com">
-              </p>
-
-              <p class="pick-form__field form-field">
-                <label class="form-field__label" for="phone">Телефон:*</label>
-                <input class="form-field__input" type="tel" name="phone" id="phone" pattern="(\+?\d[- .]*){7,13}" value="8 (960) 900-60-90">
-              </p>
+                  <p class="form-field form-field--textarea">
+                    <textarea class="form-field__textarea" name="comments" id="comments" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+                  </p>
+                </div>
+              </div>
             </fieldset>
 
-            <fieldset class="comments-fieldset">
-              <legend class="subtitle-wline">Комментарий</legend>
+            <fieldset class="form-fieldset contacts-fieldset">
+              <div class="container">
+                <div class="fieldset__wrapper">
+                  <legend class="fieldset-legend">Дополнительно</legend>
 
-              <p class="pick-form__field form-field form-field--textarea">
-                <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
-              </p>
+                  <ul class="form-checkbox">
+                    <li class="form-checkbox__wrap">
+                      <input class="form-checkbox__input" type="checkbox" name="more" id="sugar" checked>
+                      <label class="form-field__label form-checkbox__label" for="sugar">Сахарозаменитель</label>
+                    </li>
+                    <li class="form-checkbox__wrap">
+                      <input class="form-checkbox__input" type="checkbox" name="more" id="water">
+                      <label class="form-field__label form-checkbox__label" for="water">Питьевая вода</label>
+                    </li>
+                    <li class="form-checkbox__wrap">
+                      <input class="form-checkbox__input" type="checkbox" name="more" id="milk">
+                      <label class="form-field__label form-checkbox__label" for="milk">Молоко</label>
+                    </li>
+                    <li class="form-checkbox__wrap">
+                      <input class="form-checkbox__input" type="checkbox" name="more" id="vitamins">
+                      <label class="form-field__label form-checkbox__label" for="vitamins">Витамины</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </fieldset>
 
-            <fieldset class="contacts-fieldset">
-              <legend class="subtitle-wline">Дополнительно</legend>
+            <div class="container">
+              <div class="fieldset__wrapper form-button_wrapper">
+                <p class="form-field__wrap">
+                  <button class="button" type="submit">Отправить заявку</button>
+                </p>
 
-              <ul class="pick-form__field form-field">
-                <li class="form-field__wrap">
-                  <input type="checkbox" name="more" id="sugar">
-                  <label class="form-field__label" for="sugar">Сахарозаменитель</label>
-                </li>
-                <li class="form-field__wrap">
-                  <input type="checkbox" name="more" id="water">
-                  <label class="form-field__label" for="water">Питьевая вода</label>
-                </li>
-                <li class="form-field__wrap">
-                  <input type="checkbox" name="more" id="milk">
-                  <label class="form-field__label" for="milk">Молоко</label>
-                </li>
-                <li class="form-field__wrap">
-                  <input type="checkbox" name="more" id="vitamins">
-                  <label class="form-field__label" for="vitamins">Витамины</label>
-                </li>
-              </ul>
-            </fieldset>
-
-
-            <p class="form-field__wrap">
-              <button type="submit">Отправить заявку</button>
-            </p>
-
-            <span class="pick-form__instruction">* - Обязательные поля</span>
+                <span class="pick-form__instruction">* - Обязательные поля</span>
+              </div>
+            </div>
           </form>
 
         </section>
