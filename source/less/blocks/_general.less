@@ -1,0 +1,131 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: @main-font;
+  font-weight: 400;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
+
+
+.primary-title{
+  font-family: @main-font;
+  font-size: 36px;
+  line-height: 60px;
+  font-weight: 400;
+}
+.title-secondary{
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+  margin: 10px 0;
+  padding: 0;
+}
+.title-third{
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  color: @text-dark;
+  margin: 0;
+  padding: 0;
+}
+
+.link-btn{
+  font-size: 14px;
+  line-height: 18px;
+  color: @c-white;
+  font-weight: 400;
+  text-transform: uppercase;
+  background-color: @accent-color;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 13px 0;
+
+  &:hover,
+  &:link,
+  &:active{
+    background-color: #5eaa2f;
+  }
+  &:active{
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.button{
+  font-family: @main-font;
+  font-size: 16px;
+  line-height: 18px;
+  color: @c-white;
+  font-weight: 400;
+  text-transform: uppercase;
+  border: 0 none;
+  background-color: #68b738;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 13px 0;
+}
+
+.right-col{
+  text-align: right;
+}
+
+.subtitle-wline{
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 30px 0 35px;
+}
+.table__right-align{
+  text-align: right;
+}
+
+@media (min-width: @tablet-width) {
+  .primary-title{
+    font-size: 60px;
+  }
+  .title-secondary{
+    font-size: 60px;
+    line-height: 60px;
+  }
+  .title-third{
+    font-size: 36px;
+    line-height: 37px;
+  }
+  .button{
+    font-size: 20px;
+    line-height: 20px;
+    padding: 17px 0;
+  }
+  .subtitle-wline{
+    font-size: 36px;
+    line-height: 36px;
+    margin: 70px 0 75px;
+  }
+}
+@media (min-width: @desktop-width){
+  .wrapper{
+    background: transparent url("../img/green-cat.png") no-repeat 100% 0;
+    width: @desktop-width;
+    margin: 0 auto;
+  }
+}

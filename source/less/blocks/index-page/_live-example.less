@@ -1,0 +1,217 @@
+.live-example{
+  background-color: @c-lightgrey;
+}
+.live-example__wrapper{
+  padding-bottom: 30px;
+}
+.live-example__title{
+  padding-top: 30px;
+  margin-bottom: 40px;
+}
+.live-example__text{
+  .default-font();
+  color: @text-light;
+}
+.border-boxes__wrapper{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+.live-example__border-box{
+  font-size: 24px;
+  border: 1px solid #cdcdcd;
+  position: relative;
+  width: 125px;
+  padding: 5px 0 12px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.live-example__legend{
+  font-family: @second-font;
+  font-size: 12px;
+  line-height: auto;
+  color: @text-light;
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+  width: 80px;
+  background-color: @c-lightgrey;
+  text-transform: lowercase;
+}
+.live-example__value{
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  flex-grow: 1;
+  margin: 20px 0 0 0;
+}
+.live-example__before-after{
+  margin: 30px 0 0 0;
+}
+
+
+.before-after__slider{
+  display: flex;
+  justify-content: center;
+}
+.before-after__cat-image{
+  width: 100%;
+  height: auto;
+}
+.before-after__label{
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  background: transparent none;
+  border: 0 none;
+  cursor: pointer;
+  position: relative;
+}
+.before-after__label--before::after,
+.before-after__label--after::before{
+  content: "";
+  background: white none;
+  border: 1px solid #cdcdcd;
+  width: 40px;
+  height: 10px;
+  display: inline-block;
+}
+.before-after__label--before::after{
+  border-right: 0 none;
+  border-radius: 5px 0 0 5px;
+  margin-left: 20px;
+}
+.before-after__label--after::before{
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  margin-right: 20px;
+}
+.before-after__button--after:checked ~ .before-after__label--after::after,
+.before-after__button--before:checked ~ .before-after__label--before::before{
+  content: "";
+  background: @accent-color none;
+  width: 35px;
+  height: 6px;
+  position: absolute;
+  right: 2px;
+  top: 8px;
+  border-radius: 3px;
+}
+.before-after__button--after:checked ~ .before-after__label--after::after{
+  left: 0;
+  right: auto;
+}
+.before-after__button--after,
+.before-after__button--before{
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .live-example{
+    background: transparent none;
+    border-top: 1px solid #e6e6e6;
+  }
+  .live-example__wrapper{
+    background: linear-gradient(@c-white 0%, @c-white 60%, @c-lightgrey 60% )
+  }
+  .live-example__text{
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .border-boxes__wrapper{
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+  .live-example__border-box{
+    font-size: 30px;
+    line-height: 37px;
+    width: 160px;
+    padding: 10px 0 17px;
+    margin: 20px 40px 0 0;
+  }
+  .live-example__legend{
+    background-color: @c-white;
+    font-size: 14px;
+    line-height: 14px;
+    left: 40px;
+  }
+  .live-example__value{
+    flex-grow: 0;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+    width: 175px;
+    margin-top: 35px;
+    margin-left: 130px;
+  }
+  .live-example__before-after{
+    margin-top: 120px;
+  }
+}
+
+@media (min-width: @desktop-width){
+  .live-example{
+    border-top: 0 none;
+  }
+  .live-example__wrapper {
+    background: linear-gradient(@c-white 0%, @c-white 27%, @c-lightgrey 27%);
+    padding-bottom: 80px;
+  }
+  .live-example__title{
+    margin-bottom: 145px;
+  }
+  .live-example__legend{
+    background-color: @c-lightgrey;
+    top: 69px;
+    left: 20px;
+    width: 115px;
+  }
+  .border-boxes__wrapper{
+    margin-top: 45px;
+  }
+
+  .live-example__border-box{
+    padding: 20px 0;
+  }
+  .live-example__border-box--days .live-example__legend{
+    width: 150px;
+    left: 5px;
+  }
+  .live-example__content{
+    display: flex;
+    justify-content: space-between;
+  }
+  .live-example__left-col{
+    width: 440px;
+  }
+  .border-boxes__wrapper{
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+  .live-example__value{
+    margin-left: 0;
+    margin-top: 60px;
+    width: auto;
+  }
+  .live-example__price{
+    margin-left: 60px;
+  }
+  .live-example__before-after{
+    margin-top: 0;
+  }
+  .before-after__slider{
+    margin-top: 40px;
+  }
+  .before-after__label{
+    font-size: 20px;
+  }
+  .before-after__button--after:checked ~ .before-after__label--after::after,
+  .before-after__button--before:checked ~ .before-after__label--before::before{
+    top: 10px;
+  }
+}

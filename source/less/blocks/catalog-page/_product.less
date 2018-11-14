@@ -1,0 +1,118 @@
+
+.product{
+  width: 100%;
+  border-top: 1px solid #ededed;
+  padding-bottom: 25px;
+}
+.product__info-wrap{
+  display: flex;
+}
+.product-image__link{
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 140px;
+  text-decoration: none;
+}
+.product-image{
+  transform: scale(0.6);
+}
+.product__description{
+  width: 100%;
+}
+.product-title__link{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: @text-dark;
+}
+.product-title__title{
+  width: 75px;
+  margin: 20px 0;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+}
+.product__spec{
+  font-size: 12px;
+  line-height: 16px;
+  font-family: @second-font;
+  color: @text-light;
+  border-spacing: 0;
+  width: 100%;
+}
+.product__link{
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px 0;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .product{
+    background: linear-gradient(@c-white 25%,@c-lightgrey 25%);
+    width: 325px;
+    padding-top: 90px;
+    padding: 40px;
+    box-sizing: border-box;
+    border-top: 0 none;
+  }
+  .product__info-wrap{
+    flex-direction: column;
+  }
+  .product-image__link{
+    height: 205px;
+    margin-bottom: 45px;
+    width: 100%;
+  }
+  .product-title__title{
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+  }
+  .product-title__link{
+    width: 125px;
+    font-size: 20px;
+    line-height: 20px;
+    display: inline-block;
+  }
+  .product__spec td{
+    border-bottom: 1px solid #cdcdcd;
+    padding: 5px 0;
+  }
+  .product__link{
+    margin-top: 35px;
+  }
+  .product-image {
+    width: auto;
+    transform: scale(1);
+  }
+}
+
+@media (min-width: @desktop-width){
+  .product{
+    margin-right: 80px;
+    width: 245px;
+    position: relative;
+    padding-top: 240px;
+    margin-top: 70px;
+  }
+  .product-image__link{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .product:nth-child(4n){
+    margin-right: 0;
+  }
+  .product__spec{
+    font-size: 16px;
+  }
+  .product-title__title{
+    margin-top: 0;
+  }
+  .product__spec td{
+    padding: 7px 0;
+  }
+}

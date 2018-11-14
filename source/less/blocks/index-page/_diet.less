@@ -1,0 +1,150 @@
+.diet-programs__wrapper{
+  display: flex;
+  flex-direction: column;
+}
+.diet{
+  background-color: @c-lightgrey;
+  padding: 20px;
+  margin: 20px 0 0 0;
+}
+.diet__title{
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 0 0 20px 75px;
+  padding-top: 5px;
+  vertical-align: middle;
+  position: relative;
+
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75px;
+    width: 50px;
+    height: 53px;
+  }
+}
+.diet__title--slim::before{
+  background: transparent url("../img/cat-icon-slim.png") no-repeat scroll 0 0;
+  background-size: contain;
+}
+.diet__title--strong::before{
+  background: transparent url("../img/cat-icon-strong.png") no-repeat scroll 0 0;
+  background-size: contain;
+  width: 67px;
+  left: -80px;
+}
+.diet__description{
+  .default-font();
+}
+.diet__link{
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  color: @text-dark;
+  text-transform: uppercase;
+  border-top: 1px solid #d9d9d9;
+  padding: 15px 0 0;
+
+  &::after{
+    content: "";
+    background: transparent url("../img/right-arrow-long.png") no-repeat scroll 0 0;
+    display: inline-block;
+    width: 24px;
+    height: 11px;
+    margin: 0 0 2px 10px;
+  }
+  &:hover::after,
+  &:active::after{
+    background-image: url("../img/right-arrow-verylong.png");
+    width: 33px;
+  }
+  &:active{
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .diet{
+    padding: 80px 60px 60px 55px;
+  }
+  .diet__description{
+    font-size: 16px;
+    line-height: 24px;
+    color: @text-light;
+    width: 370px;
+  }
+  .diet--slim{
+    background-image: url("../img/cat-icon-slim.png");
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+  }
+  .diet--strong{
+    background-image: url("../img/cat-icon-strong.png");
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+
+    .diet__description{
+      width: 320px;
+    }
+  }
+  .diet__title{
+    margin-left: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+  .diet__link{
+    font-size: 20px;
+    border: 0 none;
+  }
+}
+@media (min-width: @desktop-width){
+  .diet-programs__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 80px;
+  }
+  .diet{
+    width: 570px;
+    box-sizing: border-box;
+  }
+  .diet--slim,
+  .diet--strong{
+    background-image: none;
+  }
+  .diet__title{
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 0 0 55px 160px;
+    padding-top: 5px;
+    vertical-align: middle;
+    position: relative;
+
+    &::before{
+      display: block;
+      content: "";
+      position: absolute;
+      top: -30px;
+      left: -160px;
+      width: 100px;
+      height: 106px;
+    }
+  }
+  .diet__title--slim::before{
+    background: transparent url("../img/cat-icon-slim.png") no-repeat scroll 0 0;
+    background-size: contain;
+  }
+  .diet__title--strong::before{
+    background: transparent url("../img/cat-icon-strong.png") no-repeat scroll 0 0;
+    background-size: contain;
+    width: 134px;
+    height: 100px;
+    left: -180px;
+  }
+  .diet--strong .diet__description,
+  .diet__description{
+    width: auto;
+  }
+}
