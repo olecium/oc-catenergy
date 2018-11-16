@@ -463,6 +463,7 @@ a {
 .fieldset-legend {
   font-size: 24px;
   line-height: 24px;
+  font-weight: 400;
   margin: 30px 0;
 }
 .fieldset__wrapper {
@@ -843,15 +844,15 @@ a {
   .menu-list__link {
     font-size: 18px;
   }
-  .menu-list__item--active .menu-list__link {
-    border-bottom: 2px solid #68b738;
-    padding-bottom: 5px;
-  }
-  .menu-list__link:hover {
+  .menu-list__link :hover {
     opacity: 0.6;
   }
   .menu-list__link:active {
     opacity: 0.3;
+  }
+  .menu-list__item--active .menu-list__link {
+    border-bottom: 2px solid #68b738;
+    padding-bottom: 5px;
   }
   .main-nav__toggle {
     display: none;
