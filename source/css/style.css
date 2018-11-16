@@ -616,6 +616,7 @@ a {
   .form-field__input {
     font-size: 20px;
     line-height: 20px;
+    height: 53px;
     padding: 15px;
   }
   .form-field__textarea {
@@ -777,9 +778,9 @@ a {
   text-indent: -1000px;
   position: relative;
   cursor: pointer;
+  margin-left: 30px;
 }
-.main-nav__toggle::after,
-.main-nav__toggle::before {
+.main-nav__toggle::after {
   content: "";
   position: absolute;
   top: 6px;
@@ -787,21 +788,18 @@ a {
   background-color: #222222;
   width: 24px;
   height: 2px;
-}
-.main-nav__toggle::after {
-  top: 14px;
+  box-shadow: 0 8px 0 0 #222222;
 }
 .main-nav__toggle--active {
-  -webkit-transform: rotate(45deg) translateY(10px);
-          transform: rotate(45deg) translateY(10px);
+  top: 6px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
-.main-nav__toggle--active::before {
+.main-nav__toggle--active::after {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   top: -2px;
-}
-.main-nav__toggle--active::after {
-  display: none;
+  box-shadow: 0 0 0 0 transparent;
 }
 .menu-list {
   display: flex;
