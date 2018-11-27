@@ -1,0 +1,116 @@
+.advantages__list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.advantages__title{
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.advantages__item{
+  .default-font();
+  margin: 0 0 25px 80px;
+  padding: 5px 0 0 0;
+  position: relative;
+
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -80px;
+    width: 60px;
+    height: 60px;
+    background-color: @accent-color;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 50px 50px;
+  }
+
+  &:nth-child(1)::before{
+    background-image: url("../img/advantage-leaf@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx){
+      background-image: url("../img/advantage-leaf@2x.png");
+    }
+  }
+
+  &:nth-child(2)::before{
+    background-image: url("../img/advantage-powder@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx){
+      background-image: url("../img/advantage-powder@2x.png");
+    }
+  }
+
+  &:nth-child(3)::before{
+    background-image: url("../img/advantage-dining@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx){
+    background-image: url("../img/advantage-dining@2x.png");
+    }
+  }
+
+  &:nth-child(4)::before{
+    background-image: url("../img/advantage-clock@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx){
+      background-image: url("../img/advantage-clock@2x.png");
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .advantages__item{
+    margin: 60px 175px 30px 0;
+    padding-top: 115px;
+    padding-right: 30px;
+    font-size: 16px;
+    line-height: 24px;
+    color: @text-light;
+    width: 210px;
+  }
+  .advantages__item:nth-child(2n){
+    margin-right: 0;
+  }
+  .advantages__item::before{
+    left: 0;
+    width: 80px;
+    height: 80px;
+  }
+  .generate-numbers(@n) when (@n>0){
+    .advantages__item:nth-child(@{n})::after{
+      content: "@{n}";
+    }
+    .generate-numbers(@n - 1);
+  }
+  .advantages__item::after{
+    font-family: @main-font;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    color: @c-lightgrey;
+    font-size: 281px;
+    z-index: -1;
+  }
+  .generate-numbers(4);
+  .advantages__wrap{
+    margin: 50px 0;
+  }
+}
+@media (min-width: @desktop-width){
+  .advantages__list{
+    justify-content: space-between;
+  }
+  .advantages__item{
+    margin-right: 0;
+  }
+  .advantages__wrap{
+    margin: 70px 0;
+  }
+}

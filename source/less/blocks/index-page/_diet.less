@@ -17,22 +17,38 @@
 
   &::before{
     content: "";
+    display: block;
     position: absolute;
-    top: 0;
+    top: 0px;
     left: -75px;
     width: 50px;
-    height: 53px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: @accent-color;
   }
-}
-.diet__title--slim::before{
-  background: transparent url("../img/cat-icon-slim.png") no-repeat scroll 0 0;
-  background-size: contain;
-}
-.diet__title--strong::before{
-  background: transparent url("../img/cat-icon-strong.png") no-repeat scroll 0 0;
-  background-size: contain;
-  width: 67px;
-  left: -80px;
+
+  &::after{
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -67px;
+    width: 35px;
+    height: 49px;
+  }
+
+  &--slim::after{
+    background: transparent url("../img/icon-cat-slim.svg") no-repeat scroll 0 0;
+    background-size: contain;
+  }
+
+  &--strong::after{
+    background: transparent url("../img/icon-cat-pro.svg") no-repeat scroll 0 0;
+    background-size: contain;
+    width: 67px;
+    height: 28px;
+    top: 10px;
+    left: -85px;
+  }
 }
 .diet__description{
   .default-font();
@@ -66,7 +82,38 @@
 
 @media (min-width: @tablet-width) {
   .diet{
+    position: relative;
     padding: 80px 60px 60px 55px;
+/*
+    &::before{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 200px;
+      height: 200px;
+      border-radius: 100px;
+      background-color: @accent-color;
+    }
+
+    &--slim{
+      background: transparent url("../img/icon-cat-slim.svg") no-repeat scroll 0 0;
+      background-position: 90% 50%;
+      width: 140px;
+      height: 194px;
+    }
+
+    &--strong{
+      background: transparent url("../img/icon-cat-pro.svg") no-repeat scroll 0 0;
+      background-position: 90% 50%;
+      width: 268px;
+      height: 112px;
+
+      .diet__description{
+        width: 320px;
+      }
+    }*/
   }
   .diet__description{
     font-size: 16px;
@@ -74,26 +121,37 @@
     color: @text-light;
     width: 370px;
   }
-  .diet--slim{
-    background-image: url("../img/cat-icon-slim.png");
-    background-repeat: no-repeat;
-    background-position: 90% 50%;
-  }
-  .diet--strong{
-    background-image: url("../img/cat-icon-strong.png");
-    background-repeat: no-repeat;
-    background-position: 90% 50%;
-
-    .diet__description{
-      width: 320px;
-    }
-  }
   .diet__title{
     margin-left: 0;
+    width: 100%;
 
     &::before {
-      display: none;
+      top: 27px;
+      right: 0;
+      left: auto;
+      width: 200px;
+      height: 200px;
+      border-radius: 100px;
     }
+
+    &--slim::after {
+      top: 14px;
+      right: 30px;
+      left: auto;
+      width: 140px;
+      height: 194px;
+    }
+
+    &--strong::after {
+      top: 77px;
+      right: -35px;
+      left: auto;
+      width: 268px;
+      height: 112px;
+    }
+  }
+  .diet--strong .diet__description{
+    width: 320px;
   }
   .diet__link{
     font-size: 20px;
@@ -109,10 +167,11 @@
   .diet{
     width: 570px;
     box-sizing: border-box;
-  }
-  .diet--slim,
-  .diet--strong{
-    background-image: none;
+
+    &--slim,
+    &--strong{
+      background-image: none;
+    }
   }
   .diet__title{
     display: inline-block;
@@ -123,25 +182,28 @@
     position: relative;
 
     &::before{
-      display: block;
-      content: "";
-      position: absolute;
       top: -30px;
       left: -160px;
+      right: auto;
       width: 100px;
-      height: 106px;
+      height: 100px;
+      border-radius: 50px;
     }
-  }
-  .diet__title--slim::before{
-    background: transparent url("../img/cat-icon-slim.png") no-repeat scroll 0 0;
-    background-size: contain;
-  }
-  .diet__title--strong::before{
-    background: transparent url("../img/cat-icon-strong.png") no-repeat scroll 0 0;
-    background-size: contain;
-    width: 134px;
-    height: 100px;
-    left: -180px;
+
+    &--slim::after{
+      top: -35px;
+      left: -145px;
+      right: auto;
+      width: 70px;
+      height: 97px;
+    }
+
+    &--strong::after{
+      width: 134px;
+      height: 56px;
+      top: -10px;
+      left: -180px;
+    }
   }
   .diet--strong .diet__description,
   .diet__description{

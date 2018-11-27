@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/oswaldregular.woff2") format("woff2"),
+    url("../fonts/oswaldregular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 *,
 *::before,
 *::after {
@@ -14,10 +22,6 @@ body {
 
   font-family: @main-font;
   font-weight: 400;
-}
-img {
-  max-width: 100%;
-  height: auto;
 }
 a {
   text-decoration: none;
@@ -44,6 +48,14 @@ a {
   color: @text-dark;
   margin: 0;
   padding: 0;
+}
+.subtitle{
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: 400;
+  display: inline-block;
+
 }
 
 .link-btn{
@@ -121,11 +133,22 @@ a {
     line-height: 36px;
     margin: 70px 0 75px;
   }
+  .subtitle{
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 @media (min-width: @desktop-width){
   .wrapper{
-    background: transparent url("../img/green-cat.png") no-repeat 100% 0;
     width: @desktop-width;
     margin: 0 auto;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 720px 696px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx){
+      background-image: url("../img/index-background-desktop@2x.jpg");
+    }
   }
 }

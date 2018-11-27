@@ -1,12 +1,7 @@
 .page-header{
   background-color: @c-white;
 }
-.page-header__logo{
-  background-image: url("../img/logo-mobile.png"),
-                    url("../img/logo-mobile-header.png");
-  background-repeat: no-repeat;
-  background-position: 0 50%, 90px 50%;
-  text-indent: -1000px;
+.page-header__logo img{
   width: 195px;
   height: 38px;
 }
@@ -31,8 +26,7 @@
     justify-content: space-between;
     padding-left: 0;
   }
-  .page-header__logo{
-    background-image:url("../img/logo-tablet.png");
+  .page-header__logo img{
     width: 173px;
     height: 58px;
   }
@@ -44,8 +38,7 @@
   .page-header{
     background-color: transparent;
   }
-  .page-header__logo{
-    background-image: url("../img/logo-desktop.svg");
+  .page-header__logo img{
     width: 202px;
     height: 59px;
   }

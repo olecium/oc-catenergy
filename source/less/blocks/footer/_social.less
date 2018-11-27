@@ -1,0 +1,44 @@
+
+.social__list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+}
+.social__item{
+  margin-right: 40px;
+}
+.social__item:last-child{
+  margin-right: 0;
+}
+.social__image{
+  display: block;
+  transform: scale(0.7);
+    fill: #666666;
+}
+
+@media (min-width: @tablet-width) {
+  .social__image{
+    transform: scale(1);
+
+    &--vk{
+      width: 30px;
+      height: 16px;
+    }
+
+    &--insta{
+      width: 23px;
+      height: 23px;
+    }
+
+    &--fb{
+      width: 14px;
+      height: 28px;
+    }
+  }
+}
+
+
+@media (min-width: @desktop-width){
+}

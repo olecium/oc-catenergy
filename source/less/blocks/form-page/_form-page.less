@@ -1,14 +1,5 @@
-.page-form  .location-address-wrapper,
-.page-catalog .location-address-wrapper{
+.form-page  .location-address-wrapper{
   background-color: @c-lightgrey;
-}
-
-.form-page__subtitle{
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-  font-weight: 400;
-  display: inline-block;
 }
 .info-fieldset{
   margin: 35px 0 0;
@@ -24,22 +15,20 @@
 }
 
 @media (min-width: @tablet-width) {
-  .form-page__subtitle{
-    font-size: 20px;
-    line-height: 30px;
-  }
 }
 
-
 @media (min-width: @desktop-width){
-  .page-form.wrapper{
+  .form-page.wrapper{
     background: transparent none;
   }
-  .page-form .menu-list__link{
+  .form-page .main-nav__link{
     color: #111111;
   }
-  .page-form .menu-list__item--active .menu-list__link{
+  .form-page .main-nav__item--active .main-nav__link{
     border-color: @accent-color;
+  }
+  .form-page  .location-address-wrapper{
+    background-color: transparent;
   }
   .general-info__wrapper{
     display: flex;

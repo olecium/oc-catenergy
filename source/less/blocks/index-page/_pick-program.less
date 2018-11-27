@@ -1,6 +1,14 @@
 .pick-program{
-  background: transparent url("../img/green-cat.png") no-repeat 50% 0;
-  background-size: contain;
+
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: 320px 305px;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx){
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
+
 }
 .pick-program__wrapper{
   border-top: 1px solid transparent;
@@ -18,13 +26,10 @@
   text-align: center;
 }
 .pick-program__subtitle{
-  font-size: 14px;
   color: @c-white;
-  font-weight: 400;
-  text-transform: uppercase;
   text-align: center;
   display: block;
-  margin: 20px 0;
+  padding: 20px 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -46,6 +51,7 @@
     padding: 17px 0;
   }
   .pick-program__img{
+    max-width: 709px;
     width: 709px;
     height: 609px;
     margin-left: -@pick_program_padding;
@@ -57,7 +63,6 @@
   }
   .pick-program__subtitle{
     color: @text-dark;
-    font-size: 20px;
     line-height: 20px;
     text-align: left;
   }
@@ -80,7 +85,7 @@
     margin-left: -50px;
   }
   .pick-program__subtitle{
-    margin: 45px 0;
+    padding: 45px 0;
   }
   .pick-program__link{
     top: 340px;
