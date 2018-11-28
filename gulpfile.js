@@ -9,7 +9,7 @@ var browserSync = require("browser-sync").create(); // Подключаем Brow
 
 gulp.task('style', function(){ // Создаем таск less
   return gulp.src('source/less/style.less') // Берем источник
-    .pipe(plumber())
+    .pipe(plumber()) //отслеживаем ошибки
     .pipe(less()) // Преобразуем Less в CSS посредством gulp-less
     .pipe(postcss([
       autoprefixer()
