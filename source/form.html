@@ -4,11 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cat Energy -   питание для котов</title>
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/style.min.css" type="text/css">
+    <script>
+      document.createElement('picture');
+    </script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
     <div style="display: none;">
-      <include src="img/sprite.svg"></include>
+      <include src="build/img/sprite.svg"></include>
     </div>
 
     <div class="form-page wrapper">
@@ -211,21 +215,21 @@
                   <li class="social__item">
                     <a class="social__link" href="#" aria-label="Мы в Вконтакте">
                       <svg class="social__image social__image--vk" width="22" height="12">
-                        <use xlink:href="img/sprite.svg#sprite-icon-vk"></use>
+                        <use xlink:href="#sprite-icon-vk"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social__item">
                     <a class="social__link social__link--insta" href="#" aria-label="Мы в Инстаграм">
                       <svg class="social__image social__image--insta" width="16" height="16">
-                        <use xlink:href="img/sprite.svg#sprite-icon-insta"></use>
+                        <use xlink:href="#sprite-icon-insta"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social__item">
                     <a class="social__link social__link--fb" href="#" aria-label="Мы в Фэйсбуке">
                       <svg class="social__image social__image--fb" width="10" height="19">
-                        <use xlink:href="img/sprite.svg#sprite-icon-fb"></use>
+                        <use xlink:href="#sprite-icon-fb"></use>
                       </svg>
                     </a>
                   </li>
@@ -236,7 +240,7 @@
                 <a class="copyright__link" href="#">
                   <p class="copyright__text">HTML Academy</p>
                   <svg class="copyright__logo" width="27" height="34">
-                    <use xlink:href="img/sprite.svg#sprite-htmlacademy"></use>
+                    <use xlink:href="#sprite-htmlacademy"></use>
                   </svg>
                 </a>
               </div>
@@ -247,5 +251,6 @@
         <!--Footer end-->
 
     </div>
+    <script src="js/main.min.js" async></script>
   </body>
 </html>
