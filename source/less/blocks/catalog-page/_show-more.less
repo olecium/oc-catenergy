@@ -4,6 +4,22 @@
   flex-direction: column;
   background: transparent none;
   border-bottom: 1px solid #ededed;
+  padding-top: 26px;
+
+  &::before {
+    content: "";
+    margin: 0 auto;
+    margin-bottom: 24px;
+
+    display: block;
+    width: 30px;
+    height: 30px;
+
+    background-image: url("../img/icon-plus-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.2;
+  }
 }
 .show-more__image {
   align-self: center;
@@ -48,6 +64,14 @@
     background: transparent none;
     border: 1px solid #e6e6e6;
     box-sizing: border-box;
+
+    &::before {
+      margin-bottom: 48px;
+      background-image: url("../img/icon-plus.svg");
+      width: 60px;
+      height: 60px;
+    }
+
   }
   .show-more__image{
     transform: scale(1);

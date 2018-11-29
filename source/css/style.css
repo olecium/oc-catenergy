@@ -497,6 +497,7 @@ a {
   display: flex;
   align-items: center;
   margin: 7px 0;
+  position: relative;
 }
 .form-field__label {
   font-size: 16px;
@@ -512,8 +513,34 @@ a {
   text-transform: uppercase;
   border: 1px solid #e6e6e6;
   padding: 10px;
-  color: #444444;
+  color: #222222;
   flex-grow: 1;
+}
+.form-field__input::-webkit-input-placeholder {
+  color: #444444;
+}
+.form-field__input:-ms-input-placeholder {
+  color: #444444;
+}
+.form-field__input::-ms-input-placeholder {
+  color: #444444;
+}
+.form-field__input::placeholder {
+  color: #444444;
+}
+.form-field__icon {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+.form-field__icon--mail {
+  width: 17px;
+  height: 13px;
+}
+.form-field__icon--phone {
+  top: 10px;
+  width: 20px;
+  height: 20px;
 }
 .form-radio__wrapper {
   margin: 25px 0 0 0;
@@ -538,8 +565,20 @@ a {
   line-height: 18px;
   border: 1px solid #e6e6e6;
   padding: 20px;
-  color: #444444;
   width: 100%;
+  color: #222222;
+}
+.form-field__textarea::-webkit-input-placeholder {
+  color: #444444;
+}
+.form-field__textarea:-ms-input-placeholder {
+  color: #444444;
+}
+.form-field__textarea::-ms-input-placeholder {
+  color: #444444;
+}
+.form-field__textarea::placeholder {
+  color: #444444;
 }
 .form-checkbox {
   display: flex;
@@ -607,18 +646,9 @@ a {
   left: 5px;
   width: 21px;
   height: 16px;
-  background-image: url('../img/tick.png');
+  fill: #68b738;
+  background-image: url('../img/icon-tick.svg');
   background-position: 0 0;
-  background-repeat: no-repeat;
-}
-.form-field__input[type="email"] {
-  background-image: url('../img/mail.png');
-  background-position: 96% 50%;
-  background-repeat: no-repeat;
-}
-.form-field__input[type="tel"] {
-  background-image: url('../img/phone.png');
-  background-position: 96% 50%;
   background-repeat: no-repeat;
 }
 @media (min-width: 768px) {
@@ -642,6 +672,16 @@ a {
     line-height: 20px;
     height: 53px;
     padding: 15px;
+  }
+  .form-field__icon {
+    top: 20px;
+  }
+  .form-field__icon--mail {
+    width: 21px;
+    height: 14px;
+  }
+  .form-field__icon--phone {
+    top: 18px;
   }
   .form-field__textarea {
     font-size: 20px;
@@ -1037,7 +1077,7 @@ a {
 }
 .diet__link::after {
   content: "";
-  background: transparent url("../img/right-arrow-long.png") no-repeat scroll 0 0;
+  background: transparent url("../img/icon-right-arrow-long.svg") no-repeat scroll 0 0;
   display: inline-block;
   width: 24px;
   height: 11px;
@@ -1045,7 +1085,7 @@ a {
 }
 .diet__link:hover::after,
 .diet__link:active::after {
-  background-image: url("../img/right-arrow-verylong.png");
+  background-image: url("../img/icon-right-arrow-verylong.svg");
   width: 33px;
 }
 .diet__link:active {
@@ -1055,36 +1095,6 @@ a {
   .diet {
     position: relative;
     padding: 80px 60px 60px 55px;
-    /*
-    &::before{
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 200px;
-      height: 200px;
-      border-radius: 100px;
-      background-color: @accent-color;
-    }
-
-    &--slim{
-      background: transparent url("../img/icon-cat-slim.svg") no-repeat scroll 0 0;
-      background-position: 90% 50%;
-      width: 140px;
-      height: 194px;
-    }
-
-    &--strong{
-      background: transparent url("../img/icon-cat-pro.svg") no-repeat scroll 0 0;
-      background-position: 90% 50%;
-      width: 268px;
-      height: 112px;
-
-      .diet__description{
-        width: 320px;
-      }
-    }*/
   }
   .diet__description {
     font-size: 16px;
@@ -1718,8 +1728,6 @@ a {
 }
 .social__image {
   display: block;
-  -webkit-transform: scale(0.7);
-          transform: scale(0.7);
   fill: #666666;
 }
 @media (min-width: 768px) {
@@ -1982,6 +1990,19 @@ a {
   flex-direction: column;
   background: transparent none;
   border-bottom: 1px solid #ededed;
+  padding-top: 26px;
+}
+.show-more::before {
+  content: "";
+  margin: 0 auto;
+  margin-bottom: 24px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/icon-plus-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0.2;
 }
 .show-more__image {
   align-self: center;
@@ -2026,6 +2047,12 @@ a {
     background: transparent none;
     border: 1px solid #e6e6e6;
     box-sizing: border-box;
+  }
+  .product.show-more::before {
+    margin-bottom: 48px;
+    background-image: url("../img/icon-plus.svg");
+    width: 60px;
+    height: 60px;
   }
   .show-more__image {
     -webkit-transform: scale(1);
