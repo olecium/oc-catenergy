@@ -793,7 +793,7 @@ a {
 .page-header__logo-wrapper {
   display: flex;
   align-items: center;
-  padding: 15px 20px;
+  padding: 15px 0;
   flex-grow: 1;
   justify-content: space-around;
 }
@@ -804,6 +804,7 @@ a {
   .page-header__logo-wrapper {
     justify-content: space-between;
     padding-left: 0;
+    padding-right: 0;
   }
   .page-header__logo img {
     width: 173px;
@@ -825,7 +826,10 @@ a {
 .main-nav {
   flex-grow: 1;
   width: 100%;
-  /* display: none;*/
+  display: none;
+}
+.main-nav--open {
+  display: block;
 }
 .main-nav__toggle {
   border: 0 none;
@@ -885,6 +889,7 @@ a {
 @media (min-width: 768px) {
   .main-nav {
     width: auto;
+    display: block;
   }
   .main-nav__list {
     flex-direction: row;
@@ -920,6 +925,11 @@ a {
   }
   .main-nav__item--active .main-nav__link {
     border-color: #ffffff;
+  }
+}
+@media (max-width: 320px) {
+  .main-nav__toggle:focus {
+    outline: 0 none;
   }
 }
 .pick-program {
@@ -1754,6 +1764,7 @@ a {
   list-style: none;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 .add-products__list {
   list-style: none;
@@ -1891,6 +1902,7 @@ a {
 @media (min-width: 1300px) {
   .product {
     margin-right: 80px;
+    background: linear-gradient(#ffffff 15%, #f2f2f2 15%);
     width: 245px;
     position: relative;
     padding-top: 240px;
@@ -1900,6 +1912,7 @@ a {
     position: absolute;
     top: 0;
     left: 0;
+    margin-bottom: 0;
   }
   .product:nth-child(4n) {
     margin-right: 0;
@@ -2068,7 +2081,15 @@ a {
     font-size: 16px;
     line-height: 20px;
     width: 170px;
-    margin-bottom: 69px;
+    margin-bottom: 72px;
+  }
+}
+@media (min-width: 1300px) {
+  product.show-more {
+    margin-top: 145px;
+  }
+  .show-more__info {
+    margin-bottom: 79px;
   }
 }
 .gift {
@@ -2088,6 +2109,7 @@ a {
 }
 .gift__icon {
   margin-bottom: 65px;
+  fill: #ffffff;
 }
 .gift__text {
   color: #ffffff;
@@ -2108,7 +2130,6 @@ a {
   }
   .gift__icon {
     margin: 0;
-    fill: #ffffff;
   }
   .gift__text {
     text-align: left;

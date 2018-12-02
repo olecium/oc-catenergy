@@ -1,7 +1,11 @@
 .main-nav{
   flex-grow: 1;
   width: 100%;
- /* display: none;*/
+  display: none;
+
+  &--open{
+    display: block;
+  }
 }
 .main-nav__toggle{
   border: 0 none;
@@ -63,6 +67,7 @@
 @media (min-width: @tablet-width) {
   .main-nav{
     width: auto;
+    display: block;
   }
   .main-nav__list{
     flex-direction: row;
@@ -101,5 +106,11 @@
   }
   .main-nav__item--active .main-nav__link{
     border-color: @c-white;
+  }
+}
+
+@media (max-width: @mobile-width){
+  .main-nav__toggle:focus{
+    outline: 0 none;
   }
 }
